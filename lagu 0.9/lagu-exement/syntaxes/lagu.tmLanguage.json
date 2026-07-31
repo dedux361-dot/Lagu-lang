@@ -1,0 +1,49 @@
+{
+    "$schema": "https://githubusercontent.com",
+    "name": "Lagu",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.lagu",
+                "match": "\\b(import|print|input|cycle|fo|to)\\b"
+            }]
+        },
+        "functions": {
+            "patterns": [{
+                "name": "entity.name.function.lagu",
+                "match": "\\b(dis|lac|po|sq|ab|rn|cl|fl|rd|rdch)\\b"
+            }]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.lagu",
+                    "begin": "\"",
+                    "end": "\""
+                },
+                {
+                    "name": "string.unquoted.lagu",
+                    "begin": "(?<=dis\\()",
+                    "end": "(?=\\))",
+                    "patterns": [
+                        {
+                            "include": "#functions"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "scopeName": "source.lagu"
+}

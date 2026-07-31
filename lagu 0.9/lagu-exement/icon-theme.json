@@ -1,0 +1,13 @@
+{
+    "id": "lagu-icons",
+    "label": "Lagu Icons",
+    "restsOn": "vs-seti",
+    "iconDefinitions": {
+        "lagu_file_icon": {
+            "iconPath": "./lagu-icon.png"
+        }
+    },
+    "fileExtensions": {
+        "lagu": "lagu_file_icon"
+    }
+}

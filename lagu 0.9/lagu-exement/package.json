@@ -1,0 +1,30 @@
+{
+    "name": "lagu-lang-support",
+    "displayName": "Lagu Language Support",
+    "description": "Официальная поддержка языка Lagu",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "lagu",
+            "aliases": ["Lagu", "lagu"],
+            "extensions": [".lagu"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "lagu",
+            "scopeName": "source.lagu",
+            "path": "./syntaxes/lagu.tmLanguage.json"
+        }],
+        "iconThemes": [{
+            "id": "lagu-icons",
+            "label": "Lagu Icons",
+            "path": "./icon-theme.json"
+        }]
+    }
+}
